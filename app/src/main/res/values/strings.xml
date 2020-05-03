@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SixGuns点餐系统</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_home">菜单</string>
+    <string name="title_dashboard">购物车</string>
+    <string name="title_notifications">我</string>
+</resources>
