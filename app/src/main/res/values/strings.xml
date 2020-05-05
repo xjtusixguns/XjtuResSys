@@ -2,6 +2,13 @@
     <string name="app_name">SixGuns点餐系统</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_home">菜单</string>
-    <string name="title_dashboard">购物车</string>
-    <string name="title_notifications">我</string>
+    <string name="title_dashboard">预备</string>
+    <string name="title_notifications">桌位</string>
+    <string name="login">餐桌</string>
+    <string name="tv_username">桌号</string>
+    <string name="tv_password">密码</string>
+    <string name="bt_log">登录</string>
+    <string name="bt_bos">注册</string>
+    <string name="et_username">输入桌号</string>
+    <string name="et_password">输入密码</string>
 </resources>

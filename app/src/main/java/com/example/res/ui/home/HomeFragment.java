@@ -29,16 +29,6 @@ public class HomeFragment extends Fragment {
     private FoodRecyclerAdapter foodRecyclerAdapter;
     freshData freshdata;
 
-//    @Override
-//    public void onCreate(@NonNull Bundle savedInstanceState) {
-//
-//        super.onCreate(savedInstanceState);
-//        getParentFragment().setFragmentResultListener("key", this, new FragmentResultListener(){
-//
-//        });
-//    }
-
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,13 +43,6 @@ public class HomeFragment extends Fragment {
         initData();
         return view;
     }
-
-//    @Override
-//    public void onAttach(Activity activity) {
-//
-//        super.onAttach(activity);
-//
-//    }
 
     private void initData() {
         foods.add(new Food("苹果", R.drawable.apple_pic, 1));
@@ -84,17 +67,15 @@ public class HomeFragment extends Fragment {
         foods.add(new Food("哈密瓜", R.drawable.watermelon_pic,1));
     }
 
-
     private void initRecyclerView(){
         MyApplication application = (MyApplication)this.getActivity().getApplicationContext();
         ArrayList<Food> temp = application.getData();
-        FoodRecyclerView = (RecyclerView)view.findViewById(R.id.homeRecyclerView);
+        FoodRecyclerView = view.findViewById(R.id.homeRecyclerView);
         foodRecyclerAdapter = new FoodRecyclerAdapter(getActivity(), foods);
         FoodRecyclerView.setAdapter(foodRecyclerAdapter);
         FoodRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
         //设置item的分割线
         FoodRecyclerView.addItemDecoration(new DividerItemDecoration(getActivity(),DividerItemDecoration.VERTICAL));
-
 
         foodRecyclerAdapter.setOnItemClickListener(new FoodRecyclerAdapter.OnItemClickListener(){
 
@@ -104,12 +85,6 @@ public class HomeFragment extends Fragment {
                 for(Food i : temp){
                     Toast.makeText(getContext(), i.getName(), Toast.LENGTH_SHORT).show();
                 }
-                //获得DashFragment的对象
-//                FragmentManager fm = getParentFragmentManager();
-////                FragmentManager fm = getParentFragmentManager();
-//                DashFragment dashFragment = (DashFragment)fm.findFragmentById(R.id.navigation_dashboard);
-//
-//                if(dashFragment != null) dashFragment.fresh(data);
             }
         });
     }
@@ -118,7 +93,6 @@ public class HomeFragment extends Fragment {
         void freshData(Food data);
     }
 
-//    private freshData fresh;
 
 
 }

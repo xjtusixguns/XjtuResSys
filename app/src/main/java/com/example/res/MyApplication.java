@@ -1,17 +1,30 @@
 package com.example.res;
 
 import android.app.Application;
-import android.text.NoCopySpan;
 
 import java.util.ArrayList;
 
 public class MyApplication extends Application {
-    private ArrayList<Food> food_in_car = new ArrayList<Food>();;
+    public int logIn = 0;
+    private ArrayList<Food> food_in_car = new ArrayList<Food>();
+    private int UserUsing;
 
     @Override
     public void onCreate(){
         initData();
         super.onCreate();
+    }
+
+    public int getUserUsing() {
+        return this.UserUsing;
+    }
+
+    public void setUserUsing(int id) {
+        this.UserUsing = id;
+    }
+
+    public void LogIn() {
+        this.logIn = 1;
     }
 
     private void initData(){

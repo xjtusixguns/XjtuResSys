@@ -16,8 +16,6 @@ import com.example.res.R;
 
 import java.util.ArrayList;
 
-
-
 public class FoodRecyclerAdapter extends RecyclerView.Adapter<FoodRecyclerAdapter.myViewHolder> {
     private Context context;
     private ArrayList<Food> foods;
@@ -50,9 +48,9 @@ public class FoodRecyclerAdapter extends RecyclerView.Adapter<FoodRecyclerAdapte
 
         public myViewHolder(View itemView){
             super(itemView);
-            foodImage = (ImageView)itemView.findViewById(R.id.foodImage);
-            foodName = (TextView)itemView.findViewById(R.id.foodName);
-            foodCost = (TextView)itemView.findViewById(R.id.foodCost);
+            foodImage = itemView.findViewById(R.id.foodImage);
+            foodName = itemView.findViewById(R.id.foodName);
+            foodCost = itemView.findViewById(R.id.foodCost);
 
             //接下来写两个fragment之间的监听传递
             itemView.setOnClickListener(new View.OnClickListener(){
@@ -72,7 +70,7 @@ public class FoodRecyclerAdapter extends RecyclerView.Adapter<FoodRecyclerAdapte
     }
 
     public interface OnItemClickListener{
-        public void OnItemClick(View view, Food data);
+        void OnItemClick(View view, Food data);
     }
 
     private OnItemClickListener onItemClickListener;
